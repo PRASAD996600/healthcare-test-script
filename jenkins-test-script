@@ -7,6 +7,6 @@ node{
          sh 'mvn clean package'
 }
     stage('run test-script'){
-         sh 'java -jar /var/lib/jenkins/workspace/healthcare-testing/target/banking-jar-with-dependencies.jar'
+         sh 'java -jar /var/lib/jenkins/workspace/healthcare-testing/target/healthcare-jar-with-dependencies.jar'
 }
 }
