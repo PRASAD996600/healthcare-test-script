@@ -1,0 +1,12 @@
+node{
+    stage('code checkout'){
+        git 'https://github.com/PRASAD996600/healthcare-test-script.git'
+
+    }
+    stage('build test-script'){
+         sh 'mvn clean package'
+}
+    stage('run test-script'){
+         sh 'java -jar /var/lib/jenkins/workspace/healthcare-testing/target/banking-jar-with-dependencies.jar'
+}
+}
